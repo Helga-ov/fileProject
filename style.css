@@ -12,8 +12,8 @@ body {
   height: 100%;
 }
 .container {
-  height: 85%;
-  background: rgb(191, 238, 223);
+  height: 76%;
+  background: rgba(255, 255, 255, 0.6);
   border: 2px solid rgb(6, 153, 109);
   margin-top: 4%;
 }
@@ -64,7 +64,7 @@ input {
   width: 200px;
   line-height: 35px;
   position: relative;
-  top: 47px;
+  top: 30px;
   left: -9.58%;
 }
 .current:hover {
@@ -74,7 +74,7 @@ input {
 .temperature {
   font-size: 90px;
   position: relative;
-  top: 90px;
+  top: 70px;
   left: -9%;
 }
 .card {
