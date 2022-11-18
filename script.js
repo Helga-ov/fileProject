@@ -6,7 +6,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 
 let now = days[date.getDay()];
@@ -36,7 +36,7 @@ citySearch1.addEventListener("submit", dCity);
 
 function displayTemperature(response) {
   let curTemp = document.querySelector("#temperature");
-  curTemp.innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  curTemp.innerHTML = `🌦${Math.round(response.data.main.temp)}°C`;
 
   let curLocation = document.querySelector("#lc");
   curLocation.innerHTML = response.data.name;
