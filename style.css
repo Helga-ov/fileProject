@@ -1,16 +1,135 @@
-h1 {
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(43, 199, 188) 0%,
+    rgb(219, 249, 203) 72.9%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  height: 85%;
+  background: rgb(191, 238, 223);
+  border: 2px solid rgb(6, 153, 109);
+  margin-top: 4%;
+}
+form {
   text-align: center;
+  position: relative;
+  top: 4%;
 }
 
-img {
-  width: 90%;
-  margin: 20px auto;
-  border-radius: 20px;
+button.current,
+.temperature {
+  margin: 0px 24.8%;
   display: block;
 }
 
-.contact-btn {
-  display: block;
-  margin: 0 auto;
+input {
+  width: 650px;
+  font-size: 16px;
+  border: 2px solid rgb(6, 153, 109);
+  position: relative;
+  right: -5px;
+}
+.city2 {
+  line-height: 35px;
+}
+.search {
+  border-radius: 0;
+  border: 2px solid rgb(6, 153, 109);
+  background: rgb(6, 153, 109);
+  color: #fff;
+  font-size: 16px;
+  transition: all 200ms ease;
+  width: 125px;
+  line-height: 35px;
+}
+
+.search:hover {
+  color: #fff;
+  background: rgb(5, 92, 66);
+}
+.current {
+  border-radius: 0;
+  border: 2px solid rgb(6, 153, 109);
+  background: rgb(6, 153, 109);
+  color: #fff;
+  font-size: 16px;
+  transition: all 200ms ease;
   width: 200px;
+  line-height: 35px;
+  position: relative;
+  top: 47px;
+  left: -9.58%;
+}
+.current:hover {
+  color: #fff;
+  background: rgb(5, 92, 66);
+}
+.temperature {
+  font-size: 90px;
+  position: relative;
+  top: 90px;
+  left: -9%;
+}
+.card {
+  border-radius: 0;
+  border: 2px solid rgb(6, 153, 109);
+  background: #fff;
+  color: black;
+  font-size: 18px;
+  position: relative;
+  top: -150px;
+}
+.day {
+  font-weight: bold;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.temp {
+  display: block;
+  background-color: rgb(6, 153, 109);
+  padding: 8px;
+  margin: 0;
+  color: #fff;
+}
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.em {
+  text-align: center;
+  font-size: 35px;
+}
+.lc,
+.currentTime {
+  color: black;
+  font-size: 40px;
+  width: 260px;
+  line-height: 50px;
+  position: relative;
+  font-weight: bold;
+  top: -150px;
+  left: 660px;
+  text-align: left;
+}
+.lc {
+  font-size: 50px;
+}
+.ffh {
+  color: black;
+  font-size: 20px;
+  width: 260px;
+  line-height: 35px;
+  position: relative;
+  font-weight: bold;
+  top: -150px;
+  left: 660px;
+  text-align: left;
 }
