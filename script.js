@@ -36,7 +36,7 @@ citySearch1.addEventListener("submit", dCity);
 
 function displayTemperature(response) {
   let curTemp = document.querySelector("#temperature");
-  curTemp.innerHTML = `🌦${Math.round(response.data.main.temp)}°C`;
+  curTemp.innerHTML = `${Math.round(response.data.main.temp)}°C`;
 
   let curLocation = document.querySelector("#lc");
   curLocation.innerHTML = response.data.name;
@@ -52,4 +52,12 @@ function displayTemperature(response) {
 
   let feelLike = document.querySelector("#feelsLike");
   feelLike.innerHTML = `${Math.round(response.data.main.feels_like)}°C`;
+
+  let iconElement = document.querySelector("#icon1");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  let description1 = document.querySelector("#description");
+  description1.innerHTML = response.data.weather[0].description;
 }
