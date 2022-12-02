@@ -120,7 +120,7 @@ function handlSubmit(event) {
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", handlSubmit);
 
-search("Vienna");
+search("Innsbruck");
 
 function geoposition(position) {
   let apiKey = "d2f8357c65447d4cec2a7942b9dfdd3d";
