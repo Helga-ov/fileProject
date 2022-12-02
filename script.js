@@ -128,7 +128,7 @@ function geoposition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let url1 = `${apiUrl}lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  axios.get(`${url1}`).then(display);
+  axios.get(`${url1}`).then(displayTemperature);
 }
 
 function change(event) {
