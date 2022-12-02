@@ -124,11 +124,10 @@ search("Innsbruck");
 
 function geoposition(position) {
   let apiKey = "d2f8357c65447d4cec2a7942b9dfdd3d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let url1 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-  axios.get(`${url1}`).then(displayTemperature);
+  axios.get(url1).then(displayTemperature);
 }
 
 function change(event) {
@@ -138,3 +137,4 @@ function change(event) {
 
 let currentCity = document.querySelector(".current");
 currentCity.addEventListener("click", change);
+
