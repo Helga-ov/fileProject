@@ -22,14 +22,6 @@ if (minutes < 10) {
 let dateNow = document.querySelector("#currentTime");
 dateNow.innerHTML = `${now} ${hours}:${minutes}`;
 
-function dCity(event) {
-  event.preventDefault();
-  let cityInput = document.querySelector(".city2");
-  let searCity = cityInput.value;
-  let apiKey = "d2f8357c65447d4cec2a7942b9dfdd3d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searCity}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayTemperature);
-}
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -56,12 +48,12 @@ function displayForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
-          width="42"
+          width="80"
         />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max"> ${Math.round(
             forecastDay.temp.max
-          )}° </span>
+          )}°/ </span>
           <span class="weather-forecast-temperature-min"> ${Math.round(
             forecastDay.temp.min
           )}° </span>
@@ -81,9 +73,8 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-
 let citySearch1 = document.querySelector("#searchForm");
-citySearch1.addEventListener("submit", dCity);
+citySearch1.addEventListener("submit", search);
 
 function displayTemperature(response) {
   let curTemp = document.querySelector("#temperature");
@@ -111,6 +102,22 @@ function displayTemperature(response) {
   );
   let description1 = document.querySelector("#description");
   description1.innerHTML = response.data.weather[0].description;
-  
+
   getForecast(response.data.coord);
 }
+function search(city) {
+  let apiKey = "d2f8357c65447d4cec2a7942b9dfdd3d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handlSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector(".city2");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#searchForm");
+form.addEventListener("submit", handlSubmit);
+
+search("Vienna");
