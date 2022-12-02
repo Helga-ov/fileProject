@@ -6,10 +6,10 @@ body {
   );
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
-  max-height: 600px;
   background: rgba(255, 255, 255, 0.6);
   border: 2px solid rgb(6, 153, 109);
   margin-top: 50px;
@@ -97,37 +97,7 @@ input {
   line-height: 35px;
   margin-top: 20px;
 }
-.card {
-  border-radius: 0;
-  border: 4px solid rgb(6, 153, 109);
-  background: #fff;
-  color: black;
-  font-size: 18px;
-  position: relative;
-  top: -450px;
-  left: 0.1%;
-}
-.day {
-  font-weight: bold;
-  text-align: center;
-  color: rgb(0, 0, 0);
-}
-.temp {
-  display: block;
-  background-color: rgb(6, 153, 109);
-  padding: 8px;
-  margin: 0;
-  color: #fff;
-}
-.group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.em {
-  text-align: center;
-  font-size: 35px;
-}
+
 .lc,
 .currentTime {
   color: black;
@@ -157,4 +127,9 @@ input {
 .git {
   text-align: center;
   margin-top: 10px;
+}
+.weather-forecast {
+  margin-top: -380px;
+  margin-left: 10px;
+  text-align: center;
 }
