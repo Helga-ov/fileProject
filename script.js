@@ -121,3 +121,20 @@ let form = document.querySelector("#searchForm");
 form.addEventListener("submit", handlSubmit);
 
 search("Vienna");
+
+function geoposition(position) {
+  let apiKey = "d2f8357c65447d4cec2a7942b9dfdd3d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let url1 = `${apiUrl}lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(`${url1}`).then(display);
+}
+
+function change(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(geoposition);
+}
+
+let currentCity = document.querySelector(".current");
+currentCity.addEventListener("click", change);
