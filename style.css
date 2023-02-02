@@ -9,45 +9,31 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.container {
-  background: rgba(255, 255, 255, 0.6);
+.fild {
+  background: rgba(249, 246, 246, 0.6);
   border: 2px solid rgb(6, 153, 109);
-  margin-top: 50px;
+  max-width: 800px;
+  margin: 20px auto;
 }
 form {
-  text-align: center;
-  position: relative;
-  top: 4%;
-}
-
-button.current,
-.temperature,
-.description {
-  margin: 0px 24.8%;
-  display: block;
+  margin-top: 30px;
+  line-height: 35px;
+  width: 100%;
 }
 
 input {
-  min-width: 200px;
-  width: 650px;
-  font-size: 16px;
   border: 2px solid rgb(6, 153, 109);
-  position: relative;
-  right: -5px;
+  font-size: 16px;
+  width: 100%;
 }
-.city2 {
-  line-height: 35px;
-}
+
 .search {
-  border-radius: 0;
   border: 2px solid rgb(6, 153, 109);
   background: rgb(6, 153, 109);
   color: #fff;
   font-size: 16px;
   transition: all 200ms ease;
-  width: 125px;
-  line-height: 35px;
-  margin-top: 20px;
+  width: 100%;
 }
 
 .search:hover {
@@ -55,37 +41,25 @@ input {
   background: rgb(5, 92, 66);
 }
 .current {
-  border-radius: 0;
   border: 2px solid rgb(6, 153, 109);
   background: rgb(6, 153, 109);
   color: #fff;
   font-size: 16px;
   transition: all 200ms ease;
-  width: 200px;
+  width: 50%;
   line-height: 35px;
-  position: relative;
-  left: -9.58%;
 }
 .current:hover {
   color: #fff;
   background: rgb(5, 92, 66);
 }
 .temperature {
-  font-size: 100px;
-  position: relative;
-  top: -170px;
-  left: 5%;
+  font-size: 80px;
 }
 .icon {
-  width: 200px;
-  position: relative;
-  top: 10px;
-  left: 140px;
+  width: 150px;
 }
 .description {
-  position: relative;
-  left: -9.58%;
-  top: -165px;
   text-align: center;
   line-height: 35px;
   border-radius: 0;
@@ -95,33 +69,25 @@ input {
   font-size: 16px;
   width: 250px;
   line-height: 35px;
-  margin-top: 20px;
 }
 
 .lc,
 .currentTime {
   color: black;
-  font-size: 40px;
-  width: 260px;
-  line-height: 50px;
-  position: relative;
+  font-size: 35px;
   font-weight: bold;
-  top: -450px;
-  left: 650px;
-  text-align: left;
 }
 .lc {
-  font-size: 50px;
+  font-size: 60px;
+  width: 100%;
+  line-height: 1;
 }
 .ffh {
   color: black;
   font-size: 20px;
   width: 260px;
   line-height: 35px;
-  position: relative;
   font-weight: bold;
-  top: -450px;
-  left: 650px;
   text-align: left;
 }
 .git {
@@ -129,7 +95,5 @@ input {
   margin-top: 10px;
 }
 .weather-forecast {
-  margin-top: -380px;
-  margin-left: 10px;
   text-align: center;
 }
